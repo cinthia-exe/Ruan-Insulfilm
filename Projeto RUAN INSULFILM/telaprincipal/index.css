@@ -1,0 +1,1081 @@
+
+/* =========================================================
+   VARIÁVEIS PRINCIPAIS
+========================================================= */
+
+:root {
+    --bg-primary: #121212;
+    --bg-secondary: #1a1a1a;
+    --bg-card: #181818;
+    --bg-glass: rgba(26, 26, 26, 0.85);
+
+    --text-primary: #f5f5f5;
+    --text-secondary: #b0b0b0;
+
+    --gold-primary: #D4AF37;
+    --gold-light: #F3E5AB;
+    --gold-dark: #AA7C11;
+
+    --border-gold: rgba(212, 175, 55, 0.35);
+    --border-gold-solid: #D4AF37;
+    --shadow-gold: 0 4px 20px rgba(212, 175, 55, 0.15);
+
+    --font-scale: 1rem;
+    --card-border-radius: 14px;
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+}
+
+/* =========================================================
+   TEMA CLARO / ALTO CONTRASTE
+========================================================= */
+
+[data-theme="light"] {
+    --bg-primary: #f4f4f4;
+    --bg-secondary: #ffffff;
+    --bg-card: #ffffff;
+    --bg-glass: rgba(255, 255, 255, 0.96);
+
+    --text-primary: #111111;
+    --text-secondary: #333333;
+
+    --gold-primary: #735600;
+    --gold-light: #9a7600;
+    --gold-dark: #4f3b00;
+
+    --border-gold: rgba(115, 86, 0, 0.55);
+    --border-gold-solid: #735600;
+    --shadow-gold: 0 4px 15px rgba(0, 0, 0, 0.14);
+}
+
+
+/* =========================================================
+   HTML
+========================================================= */
+
+html {
+
+    font-size: var(--font-scale);
+
+    scroll-behavior: smooth;
+
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+
+    background-color:
+        var(--bg-primary);
+
+    color:
+        var(--text-primary);
+
+    font-family:
+        'Montserrat',
+        sans-serif;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+/* =========================================================
+   TRANSIÇÃO GLOBAL DO TEMA
+========================================================= */
+
+body,
+.app-navbar,
+.accessibility-bar,
+.gold-card,
+.custom-dropdown-menu,
+.hero-banner,
+footer {
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+/* =========================================================
+   MARCA
+========================================================= */
+
+.brand-title {
+
+    font-family:
+        'Cinzel',
+        serif;
+
+    letter-spacing:
+        2px;
+
+    font-weight:
+        800;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--text-primary) 0%,
+            var(--gold-primary) 50%,
+            var(--gold-light) 100%
+        );
+
+    -webkit-background-clip:
+        text;
+
+    -webkit-text-fill-color:
+        transparent;
+
+}
+
+
+/* =========================================================
+   TEXTO DOURADO
+========================================================= */
+
+.gold-text {
+
+    color:
+        var(--gold-primary) !important;
+
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.gold-card {
+
+    background-color:
+        var(--bg-card);
+
+    border:
+        1px solid var(--border-gold);
+
+    border-radius:
+        var(--card-border-radius);
+
+    box-shadow:
+        var(--shadow-gold);
+
+    transition:
+        all 0.3s cubic-bezier(
+            0.25,
+            0.8,
+            0.25,
+            1
+        );
+
+}
+
+
+.gold-card:hover {
+
+    border-color:
+        var(--gold-primary);
+
+    box-shadow:
+        0 8px 30px rgba(
+            212,
+            175,
+            55,
+            0.22
+        );
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* =========================================================
+   BOTÃO DOURADO
+========================================================= */
+
+.btn-gold {
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--gold-primary) 0%,
+            var(--gold-dark) 100%
+        );
+
+    color:
+        #000 !important;
+
+    font-weight:
+        700;
+
+    border:
+        none;
+
+    border-radius:
+        8px;
+
+    padding:
+        0.65rem 1.6rem;
+
+    transition:
+        all 0.3s ease;
+
+    letter-spacing:
+        0.5px;
+
+}
+
+
+.btn-gold:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--gold-light) 0%,
+            var(--gold-primary) 100%
+        );
+
+    box-shadow:
+        0 0 18px rgba(
+            212,
+            175,
+            55,
+            0.5
+        );
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+/* =========================================================
+   BOTÃO OUTLINE
+========================================================= */
+
+.btn-outline-gold {
+
+    border:
+        1px solid var(--gold-primary);
+
+    color:
+        var(--gold-primary) !important;
+
+    background:
+        transparent;
+
+    font-weight:
+        600;
+
+    border-radius:
+        8px;
+
+    padding:
+        0.65rem 1.6rem;
+
+    transition:
+        all 0.3s ease;
+
+}
+
+
+.btn-outline-gold:hover {
+
+    background-color:
+        var(--gold-primary);
+
+    color:
+        #000 !important;
+
+    box-shadow:
+        0 0 18px rgba(
+            212,
+            175,
+            55,
+            0.35
+        );
+
+}
+
+
+/* =========================================================
+   BARRA DE ACESSIBILIDADE
+========================================================= */
+
+.accessibility-bar {
+
+    background-color:
+        var(--bg-secondary);
+
+    border-bottom:
+        1px solid var(--border-gold);
+
+    padding:
+        0.5rem 1rem;
+
+    position:
+        sticky;
+
+    top:
+        0;
+
+    z-index:
+        1040;
+
+}
+
+
+/* =========================================================
+   BOTÕES DE ACESSIBILIDADE
+========================================================= */
+
+.access-btn {
+
+    background:
+        transparent;
+
+    border:
+        1px solid var(--border-gold);
+
+    color:
+        var(--text-primary);
+
+    padding:
+        0.25rem 0.65rem;
+
+    font-size:
+        0.85rem;
+
+    border-radius:
+        6px;
+
+    transition:
+        all 0.2s;
+
+}
+
+
+.access-btn:hover {
+
+    background:
+        var(--gold-primary);
+
+    color:
+        #000;
+
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.app-navbar {
+
+    background-color:
+        var(--bg-glass);
+
+    backdrop-filter:
+        blur(10px);
+
+    -webkit-backdrop-filter:
+        blur(10px);
+
+    border-bottom:
+        1px solid var(--border-gold);
+
+    position:
+        sticky;
+
+    top:
+        41px;
+
+    z-index:
+        1030;
+
+}
+
+
+/* =========================================================
+   LINKS DO MENU
+========================================================= */
+
+.nav-link-custom {
+
+    color:
+        var(--text-primary);
+
+    font-weight:
+        500;
+
+    padding:
+        0.5rem 0.9rem;
+
+    border-radius:
+        6px;
+
+    transition:
+        all 0.2s;
+
+    cursor:
+        pointer;
+
+    text-decoration:
+        none;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+}
+
+
+.nav-link-custom:hover,
+.nav-link-custom.active {
+
+    color:
+        var(--gold-primary);
+
+    background:
+        rgba(
+            212,
+            175,
+            55,
+            0.1
+        );
+
+}
+
+
+/* =========================================================
+   DROPDOWN
+========================================================= */
+
+.custom-dropdown {
+
+    position:
+        relative;
+
+}
+
+
+/* SETA */
+
+.custom-dropdown >
+.dropdown-toggle::after {
+
+    margin-left:
+        0.45rem;
+
+    vertical-align:
+        middle;
+
+    border-top:
+        0.3em solid var(--gold-primary);
+
+    border-right:
+        0.3em solid transparent;
+
+    border-left:
+        0.3em solid transparent;
+
+    transition:
+        transform 0.25s ease;
+
+}
+
+
+.custom-dropdown:hover >
+.dropdown-toggle::after,
+
+.custom-dropdown >
+.dropdown-toggle[aria-expanded="true"]::after {
+
+    transform:
+        rotate(180deg);
+
+}
+
+
+/* =========================================================
+   MENU DROPDOWN
+========================================================= */
+
+.custom-dropdown-menu {
+
+    background:
+        var(--bg-card);
+
+    border:
+        1px solid var(--border-gold);
+
+    border-radius:
+        10px;
+
+    padding:
+        0.45rem;
+
+    min-width:
+        230px;
+
+    box-shadow:
+        0 12px 35px rgba(
+            0,
+            0,
+            0,
+            0.45
+        );
+
+    backdrop-filter:
+        blur(12px);
+
+    -webkit-backdrop-filter:
+        blur(12px);
+
+    margin-top:
+        0.35rem !important;
+
+    opacity:
+        0;
+
+    transform:
+        translateY(8px);
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.custom-dropdown-menu.show {
+
+    opacity:
+        1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* =========================================================
+   HOVER NO DESKTOP
+========================================================= */
+
+@media (min-width: 992px) {
+
+    .custom-dropdown:hover >
+    .custom-dropdown-menu {
+
+        display:
+            block;
+
+        opacity:
+            1;
+
+        transform:
+            translateY(0);
+
+    }
+
+
+    .custom-dropdown:hover >
+    .dropdown-toggle {
+
+        color:
+            var(--gold-primary);
+
+        background:
+            rgba(
+                212,
+                175,
+                55,
+                0.1
+            );
+
+    }
+
+}
+
+
+/* =========================================================
+   ITENS DO DROPDOWN
+========================================================= */
+
+.custom-dropdown-item {
+
+    color:
+        var(--text-primary) !important;
+
+    background:
+        transparent !important;
+
+    border-radius:
+        7px;
+
+    padding:
+        0.65rem 0.8rem;
+
+    font-size:
+        0.9rem;
+
+    font-weight:
+        500;
+
+    transition:
+        all 0.2s ease;
+
+    white-space:
+        nowrap;
+
+}
+
+
+.custom-dropdown-item i {
+
+    color:
+        var(--gold-primary);
+
+    width:
+        18px;
+
+    text-align:
+        center;
+
+}
+
+
+.custom-dropdown-item:hover,
+.custom-dropdown-item:focus {
+
+    color:
+        var(--gold-primary) !important;
+
+    background:
+        rgba(
+            212,
+            175,
+            55,
+            0.12
+        ) !important;
+
+    transform:
+        translateX(3px);
+
+}
+
+
+.custom-dropdown-menu li + li {
+
+    margin-top:
+        2px;
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-banner {
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(
+                18,
+                18,
+                18,
+                0.7
+            ) 0%,
+            var(--bg-primary) 100%
+        ),
+
+        radial-gradient(
+            circle at center,
+            rgba(
+                212,
+                175,
+                55,
+                0.2
+            ) 0%,
+            transparent 75%
+        );
+
+    border-radius:
+        20px;
+
+    padding:
+        3.5rem 1.5rem;
+
+    border:
+        1px solid var(--border-gold);
+
+    margin-bottom:
+        2.5rem;
+
+}
+
+
+/* =========================================================
+   TEMA CLARO - HERO
+========================================================= */
+
+[data-theme="light"] .hero-banner {
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(
+                255,
+                255,
+                255,
+                0.95
+            ) 0%,
+            var(--bg-primary) 100%
+        ),
+
+        radial-gradient(
+            circle at center,
+            rgba(
+                115,
+                86,
+                0,
+                0.10
+            ) 0%,
+            transparent 75%
+        );
+
+}
+
+
+/* =========================================================
+   LARGURA
+========================================================= */
+
+.max-w-700 {
+
+    max-width:
+        700px;
+
+}
+
+
+/* =========================================================
+   TEXTO PEQUENO
+========================================================= */
+
+.extra-small {
+
+    font-size:
+        0.78rem;
+
+}
+
+
+/* =========================================================
+   ÂNCORAS
+========================================================= */
+
+.submenu-anchor {
+
+    scroll-margin-top:
+        120px;
+
+}
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+.footer-social {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    width:
+        38px;
+
+    height:
+        38px;
+
+    border:
+        1px solid var(--border-gold);
+
+    border-radius:
+        50%;
+
+    text-decoration:
+        none;
+
+    transition:
+        all 0.25s ease;
+
+}
+
+
+.footer-social:hover {
+
+    background:
+        var(--gold-primary);
+
+    color:
+        #000 !important;
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 5px 15px rgba(
+            212,
+            175,
+            55,
+            0.25
+        );
+
+}
+
+
+/* =========================================================
+   NAVBAR TOGGLER
+========================================================= */
+
+.navbar-toggler {
+
+    border:
+        1px solid var(--border-gold) !important;
+
+    padding:
+        0.45rem 0.65rem;
+
+}
+
+
+.navbar-toggler:focus {
+
+    box-shadow:
+        0 0 0 0.2rem
+        rgba(
+            212,
+            175,
+            55,
+            0.2
+        );
+
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE - DESKTOP / TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+
+
+    .app-navbar {
+
+        top:
+            0;
+
+    }
+
+
+    .navbar-nav {
+
+        padding-top:
+            0.75rem;
+
+    }
+
+
+    .nav-item {
+
+        width:
+            100%;
+
+    }
+
+
+    .nav-link-custom {
+
+        width:
+            100%;
+
+    }
+
+
+    /* DROPDOWN MOBILE */
+
+    .custom-dropdown-menu {
+
+        position:
+            static !important;
+
+        width:
+            100%;
+
+        margin-top:
+            0.25rem !important;
+
+        box-shadow:
+            none;
+
+        border-radius:
+            8px;
+
+        opacity:
+            1;
+
+        transform:
+            none;
+
+        display:
+            none;
+
+    }
+
+
+    .custom-dropdown-menu.show {
+
+        display:
+            block;
+
+    }
+
+
+    .custom-dropdown-item {
+
+        white-space:
+            normal;
+
+        padding:
+            0.7rem 1rem;
+
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 575.98px) {
+
+
+    .accessibility-bar {
+
+        padding:
+            0.5rem 0.75rem;
+
+    }
+
+
+    .accessibility-bar > div {
+
+        width:
+            100%;
+
+        justify-content:
+            center;
+
+    }
+
+
+    .hero-banner {
+
+        padding:
+            2.5rem 1rem;
+
+        border-radius:
+            14px;
+
+    }
+
+
+    .hero-banner h1 {
+
+        font-size:
+            2.2rem;
+
+    }
+
+
+    .hero-banner p.fs-5 {
+
+        font-size:
+            0.95rem !important;
+
+    }
+
+
+    .gold-card {
+
+        border-radius:
+            12px;
+
+    }
+
+
+    .custom-dropdown-menu {
+
+        min-width:
+            100%;
+
+    }
+
+
+    .btn-gold,
+    .btn-outline-gold {
+
+        padding:
+            0.6rem 1rem;
+
+    }
+
+}
+
+
+/* =========================================================
+   REDUÇÃO DE MOVIMENTO
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        scroll-behavior: auto !important;
+        transition: none !important;
+        animation: none !important;
+
+    }
+
+}
