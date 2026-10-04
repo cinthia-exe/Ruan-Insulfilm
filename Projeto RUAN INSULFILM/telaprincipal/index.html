@@ -1,0 +1,1289 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RUAN FILM - Principal</title>
+
+    <!-- Bootstrap 5.3 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- FontAwesome -->
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="telaprincipal.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header>
+
+
+        <!-- =================================================
+             BARRA DE ACESSIBILIDADE
+        ================================================== -->
+
+        <div class="accessibility-bar d-flex justify-content-between align-items-center flex-wrap gap-2">
+
+            <div class="d-flex align-items-center gap-3">
+
+                <span class="small text-secondary">
+
+                    <i class="fa-solid fa-phone gold-text me-1"></i>
+
+                    (21) 9 XXXX-XXXX
+
+                </span>
+
+
+                <span class="small text-secondary d-none d-md-inline">
+
+                    <i class="fa-brands fa-instagram gold-text me-1"></i>
+
+                    @ruan.film
+
+                </span>
+
+
+                <span class="small text-secondary d-none d-lg-inline">
+
+                    <i class="fa-solid fa-location-dot gold-text me-1"></i>
+
+                    Atendimento no Rio de Janeiro
+
+                </span>
+
+            </div>
+
+
+            <div class="d-flex align-items-center gap-2">
+
+
+                <!-- BOTÃO DE CONTRASTE -->
+
+                <button
+                    class="access-btn"
+                    id="btn-contrast"
+                    type="button"
+                    aria-label="Alternar contraste">
+
+                    <i class="fa-solid fa-circle-half-stroke me-1"></i>
+
+                    Contraste
+
+                </button>
+
+
+                <!-- CONTROLES DE FONTE -->
+
+                <div class="btn-group" role="group">
+
+                    <button
+                        class="access-btn"
+                        id="btn-font-decrease"
+                        type="button">
+
+                        A-
+
+                    </button>
+
+
+                    <button
+                        class="access-btn"
+                        id="btn-font-reset"
+                        type="button">
+
+                        A
+
+                    </button>
+
+
+                    <button
+                        class="access-btn"
+                        id="btn-font-increase"
+                        type="button">
+
+                        A+
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             NAVBAR
+        ================================================== -->
+
+        <nav class="navbar navbar-expand-lg app-navbar px-3 px-lg-4">
+
+            <div class="container-fluid">
+
+
+                <!-- LOGO -->
+
+                <a
+                    class="navbar-brand d-flex align-items-center gap-2"
+                    href="index.html">
+
+                    <i class="fa-solid fa-shield-halved fa-lg gold-text"></i>
+
+                    <div class="d-flex flex-column">
+
+                        <span class="brand-title h5 mb-0">
+                            RUAN FILM
+                        </span>
+
+                        <span class="text-secondary extra-small fw-semibold">
+                            Proteção, Privacidade e Economia
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- BOTÃO MOBILE -->
+
+                <button
+                    class="navbar-toggler border-gold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Abrir menu">
+
+                    <i class="fa-solid fa-bars gold-text"></i>
+
+                </button>
+
+
+
+                <!-- =================================================
+                     MENU PRINCIPAL
+                ================================================== -->
+
+                <div
+                    class="collapse navbar-collapse mt-3 mt-lg-0"
+                    id="mainNavbar">
+
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-1 ms-lg-3">
+
+
+                        <!-- HOME -->
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link-custom active"
+                                href="index.html">
+
+                                <i class="fa-solid fa-house me-1"></i>
+
+                                Home
+
+                            </a>
+
+                        </li>
+
+
+
+                        <!-- =================================================
+                             INSULFILM
+                        ================================================== -->
+
+                        <li class="nav-item dropdown custom-dropdown">
+
+
+                            <a
+                                class="nav-link-custom dropdown-toggle"
+                                href="#"
+                                id="insulfilmDropdown"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false">
+
+                                <i class="fa-solid fa-sun me-1"></i>
+
+                                Insulfilm
+
+                            </a>
+
+
+                            <ul
+                                class="dropdown-menu custom-dropdown-menu"
+                                aria-labelledby="insulfilmDropdown">
+
+
+                                <li>
+
+                                    <a
+                                        class="dropdown-item custom-dropdown-item"
+                                        href="#residencial">
+
+                                        <i class="fa-solid fa-house me-2"></i>
+
+                                        Residencial
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a
+                                        class="dropdown-item custom-dropdown-item"
+                                        href="#automotivo">
+
+                                        <i class="fa-solid fa-car me-2"></i>
+
+                                        Automotivo
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a
+                                        class="dropdown-item custom-dropdown-item"
+                                        href="#seguranca">
+
+                                        <i class="fa-solid fa-shield-halved me-2"></i>
+
+                                        Para Segurança
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a
+                                        class="dropdown-item custom-dropdown-item"
+                                        href="#comercial">
+
+                                        <i class="fa-solid fa-building me-2"></i>
+
+                                        Comercial
+
+                                    </a>
+
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+
+
+                        <!-- =================================================
+                             OUTROS SERVIÇOS
+                        ================================================== -->
+
+                        <li class="nav-item dropdown custom-dropdown">
+
+
+                            <a
+                                class="nav-link-custom dropdown-toggle"
+                                href="#"
+                                id="outrosServicosDropdown"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false">
+
+                                <i class="fa-solid fa-shield-cat me-1"></i>
+
+                                Outros Serviços
+
+                            </a>
+
+
+                            <ul
+                                class="dropdown-menu custom-dropdown-menu"
+                                aria-labelledby="outrosServicosDropdown">
+
+
+                                <li>
+
+                                    <a
+                                        class="dropdown-item custom-dropdown-item"
+                                        href="#sec-ppf">
+
+                                        <i class="fa-solid fa-shield-cat me-2"></i>
+
+                                        PPF (Paint Protection Film)
+
+                                    </a>
+
+                                </li>
+
+
+                                <li>
+
+                                    <a
+                                        class="dropdown-item custom-dropdown-item"
+                                        href="#envelopamento">
+
+                                        <i class="fa-solid fa-car-side me-2"></i>
+
+                                        Envelopamento Veicular
+
+                                    </a>
+
+                                </li>
+
+                            </ul>
+
+                        </li>
+
+
+
+                        <!-- GALERIA -->
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link-custom"
+                                href="#sec-peliculas">
+
+                                <i class="fa-solid fa-images me-1"></i>
+
+                                Galeria
+
+                            </a>
+
+                        </li>
+
+
+
+                        <!-- CONTATO -->
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link-custom"
+                                href="#contato">
+
+                                <i class="fa-solid fa-envelope me-1"></i>
+
+                                Contato
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+
+
+                    <!-- =================================================
+                         BOTÕES LOGIN / CADASTRO
+                    ================================================== -->
+
+                    <div class="d-flex align-items-center gap-2">
+
+                        <a
+                            href="login.html"
+                            class="btn btn-outline-gold btn-sm">
+
+                            <i class="fa-solid fa-right-to-bracket me-1"></i>
+
+                            Login
+
+                        </a>
+
+
+                        <a
+                            href="cadastro.html"
+                            class="btn btn-gold btn-sm">
+
+                            <i class="fa-solid fa-user-plus me-1"></i>
+
+                            Cadastro
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         CONTEÚDO
+    ====================================================== -->
+
+    <main class="container my-4 flex-grow-1">
+
+        <section>
+
+
+            <!-- =================================================
+                 HERO
+            ================================================== -->
+
+            <div class="hero-banner text-center">
+
+                <h1 class="brand-title display-4 fw-bold mb-2">
+                    RUAN FILM
+                </h1>
+
+
+                <p class="fs-5 gold-text text-uppercase fw-bold mb-3">
+
+                    ENVELOPAMENTO DE ELETRODOMÉSTICOS
+                    &amp;
+                    PELÍCULAS DE ALTO PADRÃO
+
+                </p>
+
+
+                <p class="text-secondary max-w-700 mx-auto mb-4">
+
+                    Transforme, renove e proteja seus equipamentos,
+                    móveis e veículos com tecnologia de ponta,
+                    sofisticação e máxima durabilidade.
+
+                </p>
+
+
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+
+                    <a
+                        href="cadastro.html"
+                        class="btn btn-gold">
+
+                        <i class="fa-solid fa-user-plus me-2"></i>
+
+                        Cadastrar no Sistema
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 ELETRODOMÉSTICOS
+            ================================================== -->
+
+            <div
+                class="mb-5"
+                id="sec-eletro">
+
+
+                <div
+                    class="d-flex align-items-center justify-content-between mb-3 border-bottom border-secondary pb-2">
+
+
+                    <div class="d-flex align-items-center gap-2">
+
+                        <i class="fa-solid fa-kitchen-set fa-2x gold-text"></i>
+
+
+                        <div>
+
+                            <h3 class="fw-bold mb-0">
+                                Envelopamento de Eletrodomésticos
+                            </h3>
+
+
+                            <span class="text-secondary small">
+                                Renove o visual sem gastar com aparelhos novos
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="row g-3 mb-4">
+
+
+                    <!-- PROTEGE -->
+
+                    <div class="col-12 col-md-4">
+
+                        <div
+                            class="gold-card p-3 d-flex align-items-center gap-3 h-100">
+
+                            <i class="fa-solid fa-shield-halved fa-2x gold-text"></i>
+
+
+                            <div>
+
+                                <h6 class="fw-bold mb-0 gold-text">
+                                    PROTEGE
+                                </h6>
+
+
+                                <p class="text-secondary extra-small mb-0">
+
+                                    Proteção contra riscos,
+                                    arranhões, manchas e corrosão.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- RENOVA -->
+
+                    <div class="col-12 col-md-4">
+
+                        <div
+                            class="gold-card p-3 d-flex align-items-center gap-3 h-100">
+
+                            <i class="fa-solid fa-wand-magic-sparkles fa-2x gold-text"></i>
+
+
+                            <div>
+
+                                <h6 class="fw-bold mb-0 gold-text">
+                                    RENOVA
+                                </h6>
+
+
+                                <p class="text-secondary extra-small mb-0">
+
+                                    Visual moderno e cara de novo
+                                    sem precisar trocar de aparelho.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ECONOMIZA -->
+
+                    <div class="col-12 col-md-4">
+
+                        <div
+                            class="gold-card p-3 d-flex align-items-center gap-3 h-100">
+
+                            <i class="fa-solid fa-piggy-bank fa-2x gold-text"></i>
+
+
+                            <div>
+
+                                <h6 class="fw-bold mb-0 gold-text">
+                                    ECONOMIZA
+                                </h6>
+
+
+                                <p class="text-secondary extra-small mb-0">
+
+                                    Muito mais econômico do que
+                                    a compra de um novo produto.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 INSULFILM
+            ================================================== -->
+
+            <div
+                class="mb-5"
+                id="sec-peliculas">
+
+
+                <div
+                    class="d-flex align-items-center justify-content-between mb-3 border-bottom border-secondary pb-2">
+
+
+                    <div class="d-flex align-items-center gap-2">
+
+                        <i class="fa-solid fa-sun fa-2x gold-text"></i>
+
+
+                        <div>
+
+                            <h3 class="fw-bold mb-0">
+                                Tipos e Especificações de Películas de Insulfilm
+                            </h3>
+
+
+                            <span class="text-secondary small">
+
+                                Proteção Solar,
+                                Privacidade e Economia de Energia
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ÂNCORAS -->
+
+                <div
+                    id="residencial"
+                    class="submenu-anchor">
+                </div>
+
+
+                <div
+                    id="automotivo"
+                    class="submenu-anchor">
+                </div>
+
+
+                <div
+                    id="seguranca"
+                    class="submenu-anchor">
+                </div>
+
+
+                <div
+                    id="comercial"
+                    class="submenu-anchor">
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PPF / ENVELOPAMENTO
+            ================================================== -->
+
+            <div
+                class="mb-5"
+                id="sec-ppf">
+
+
+                <div
+                    class="d-flex align-items-center justify-content-between mb-3 border-bottom border-secondary pb-2">
+
+
+                    <div class="d-flex align-items-center gap-2">
+
+                        <i class="fa-solid fa-shield-cat fa-2x gold-text"></i>
+
+
+                        <div>
+
+                            <h3 class="fw-bold mb-0">
+
+                                PPF (Paint Protection Film)
+                                e Envelopamento Veicular
+
+                            </h3>
+
+
+                            <span class="text-secondary small">
+
+                                Proteção invisível de altíssima resistência
+                                e personalização automotiva
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="envelopamento"
+                    class="submenu-anchor">
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer
+        id="contato"
+        class="gold-card p-4 text-center mt-5 rounded-0 border-x-0 border-bottom-0">
+
+
+        <div class="container">
+
+            <div class="row align-items-center g-3">
+
+
+                <div class="col-12 col-md-4 text-md-start">
+
+                    <h5 class="brand-title mb-1">
+                        RUAN INSULFILM
+                    </h5>
+
+
+                    <p class="text-secondary small mb-0">
+                        Proteção, Privacidade e Economia
+                    </p>
+
+                </div>
+
+
+
+                <div class="col-12 col-md-4">
+
+                    <div class="d-flex justify-content-center gap-3">
+
+
+                        <a
+                            href="#"
+                            class="gold-text footer-social"
+                            aria-label="WhatsApp">
+
+                            <i class="fa-brands fa-whatsapp fa-lg"></i>
+
+                        </a>
+
+
+                        <a
+                            href="#"
+                            class="gold-text footer-social"
+                            aria-label="Instagram">
+
+                            <i class="fa-brands fa-instagram fa-lg"></i>
+
+                        </a>
+
+
+                        <a
+                            href="#"
+                            class="gold-text footer-social"
+                            aria-label="E-mail">
+
+                            <i class="fa-solid fa-envelope fa-lg"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-12 col-md-4 text-md-end">
+
+                    <span class="text-secondary extra-small">
+
+                        &copy; 2026 RUAN INSULFILM
+                        - Rio de Janeiro
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         BOOTSTRAP JS
+    ====================================================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT DO SITE
+    ====================================================== -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+
+            /* =================================================
+               CONTRASTE
+            ================================================== */
+
+            const html = document.documentElement;
+
+            const contrastButton =
+                document.getElementById("btn-contrast");
+
+
+            /*
+             * Verifica se o usuário já escolheu
+             * um tema anteriormente.
+             */
+
+            const savedTheme =
+                localStorage.getItem("ruanfilm-theme");
+
+
+            if (savedTheme === "light" || savedTheme === "dark") {
+
+                html.setAttribute(
+                    "data-theme",
+                    savedTheme
+                );
+
+            }
+
+
+            /*
+             * Atualiza o texto/ícone do botão.
+             */
+
+            function updateContrastButton() {
+
+                if (!contrastButton) {
+                    return;
+                }
+
+
+                const currentTheme =
+                    html.getAttribute("data-theme");
+
+
+                if (currentTheme === "light") {
+
+                    contrastButton.innerHTML =
+                        '<i class="fa-solid fa-moon me-1"></i> Modo Escuro';
+
+                    contrastButton.setAttribute(
+                        "aria-label",
+                        "Ativar modo escuro"
+                    );
+
+                } else {
+
+                    contrastButton.innerHTML =
+                        '<i class="fa-solid fa-sun me-1"></i> Alto Contraste';
+
+                    contrastButton.setAttribute(
+                        "aria-label",
+                        "Ativar alto contraste"
+                    );
+
+                }
+
+            }
+
+
+            /*
+             * Inicializa o botão.
+             */
+
+            updateContrastButton();
+
+
+            /*
+             * Clique no botão de contraste.
+             */
+
+            if (contrastButton) {
+
+                contrastButton.addEventListener(
+                    "click",
+                    function () {
+
+
+                        const currentTheme =
+                            html.getAttribute("data-theme");
+
+
+                        const newTheme =
+                            currentTheme === "light"
+                                ? "dark"
+                                : "light";
+
+
+                        /*
+                         * Troca o tema.
+                         */
+
+                        html.setAttribute(
+                            "data-theme",
+                            newTheme
+                        );
+
+
+                        /*
+                         * Salva a preferência.
+                         */
+
+                        localStorage.setItem(
+                            "ruanfilm-theme",
+                            newTheme
+                        );
+
+
+                        /*
+                         * Atualiza o botão.
+                         */
+
+                        updateContrastButton();
+
+                    }
+                );
+
+            }
+
+
+
+            /* =================================================
+               TAMANHO DA FONTE
+            ================================================== */
+
+            const decreaseButton =
+                document.getElementById("btn-font-decrease");
+
+            const resetButton =
+                document.getElementById("btn-font-reset");
+
+            const increaseButton =
+                document.getElementById("btn-font-increase");
+
+
+            let fontScale =
+                parseFloat(
+                    localStorage.getItem("ruanfilm-font-scale")
+                );
+
+
+            if (isNaN(fontScale)) {
+
+                fontScale = 1;
+
+            }
+
+
+            function updateFontScale() {
+
+                /*
+                 * Limites:
+                 * mínimo = 0.85
+                 * máximo = 1.30
+                 */
+
+                fontScale =
+                    Math.max(
+                        0.85,
+                        Math.min(
+                            1.30,
+                            fontScale
+                        )
+                    );
+
+
+                html.style.setProperty(
+                    "--font-scale",
+                    fontScale + "rem"
+                );
+
+
+                localStorage.setItem(
+                    "ruanfilm-font-scale",
+                    fontScale
+                );
+
+            }
+
+
+            updateFontScale();
+
+
+            if (decreaseButton) {
+
+                decreaseButton.addEventListener(
+                    "click",
+                    function () {
+
+                        fontScale -= 0.05;
+
+                        updateFontScale();
+
+                    }
+                );
+
+            }
+
+
+            if (resetButton) {
+
+                resetButton.addEventListener(
+                    "click",
+                    function () {
+
+                        fontScale = 1;
+
+                        updateFontScale();
+
+                    }
+                );
+
+            }
+
+
+            if (increaseButton) {
+
+                increaseButton.addEventListener(
+                    "click",
+                    function () {
+
+                        fontScale += 0.05;
+
+                        updateFontScale();
+
+                    }
+                );
+
+            }
+
+
+
+            /* =================================================
+               DROPDOWNS
+            ================================================== */
+
+            const dropdowns =
+                document.querySelectorAll(
+                    ".custom-dropdown"
+                );
+
+
+            const desktopMedia =
+                window.matchMedia(
+                    "(min-width: 992px)"
+                );
+
+
+            dropdowns.forEach(
+                function (dropdown) {
+
+
+                    const toggle =
+                        dropdown.querySelector(
+                            ".dropdown-toggle"
+                        );
+
+
+                    const menu =
+                        dropdown.querySelector(
+                            ".dropdown-menu"
+                        );
+
+
+                    if (!toggle || !menu) {
+                        return;
+                    }
+
+
+                    /*
+                     * Desktop:
+                     * abre passando o mouse.
+                     */
+
+                    dropdown.addEventListener(
+                        "mouseenter",
+                        function () {
+
+                            if (!desktopMedia.matches) {
+                                return;
+                            }
+
+
+                            menu.classList.add("show");
+
+                            toggle.setAttribute(
+                                "aria-expanded",
+                                "true"
+                            );
+
+                        }
+                    );
+
+
+                    /*
+                     * Desktop:
+                     * fecha quando o mouse sai.
+                     */
+
+                    dropdown.addEventListener(
+                        "mouseleave",
+                        function () {
+
+                            if (!desktopMedia.matches) {
+                                return;
+                            }
+
+
+                            menu.classList.remove("show");
+
+                            toggle.setAttribute(
+                                "aria-expanded",
+                                "false"
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
+
+
+            /* =================================================
+               FECHAR SUBMENU NO CELULAR
+            ================================================== */
+
+            document
+                .querySelectorAll(
+                    ".custom-dropdown-item"
+                )
+                .forEach(
+                    function (item) {
+
+
+                        item.addEventListener(
+                            "click",
+                            function () {
+
+
+                                if (desktopMedia.matches) {
+                                    return;
+                                }
+
+
+                                const dropdown =
+                                    this.closest(
+                                        ".custom-dropdown"
+                                    );
+
+
+                                if (!dropdown) {
+                                    return;
+                                }
+
+
+                                const menu =
+                                    dropdown.querySelector(
+                                        ".dropdown-menu"
+                                    );
+
+
+                                const toggle =
+                                    dropdown.querySelector(
+                                        ".dropdown-toggle"
+                                    );
+
+
+                                if (menu) {
+
+                                    menu.classList.remove(
+                                        "show"
+                                    );
+
+                                }
+
+
+                                if (toggle) {
+
+                                    toggle.setAttribute(
+                                        "aria-expanded",
+                                        "false"
+                                    );
+
+                                }
+
+                            }
+                        );
+
+                    }
+                );
+
+        });
+
+    </script>
+
+</body>
+
+</html>
+```
